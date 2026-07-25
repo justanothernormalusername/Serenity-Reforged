@@ -1,5 +1,6 @@
 package com.serenity;
 
+import com.serenity.block.ModBlocks;
 import com.serenity.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -23,6 +24,7 @@ public class SerenityReforged implements ModInitializer {
 		// Proceed with mild caution.
 
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 
 	public static Identifier id(String path) {

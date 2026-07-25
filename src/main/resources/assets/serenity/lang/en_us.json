@@ -1,4 +1,7 @@
 {
   "item.serenity.moonstone": "Moonstone",
-  "item.serenity.polished_moonstone": "Polished Moonstone"
+  "item.serenity.polished_moonstone": "Polished Moonstone",
+
+  "block.serenity.moonstone_block": "Moonstone Block",
+  "block.serenity.polished_moonstone_block": "Polished Moonstone Block"
 }
