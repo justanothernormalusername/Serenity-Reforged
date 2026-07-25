@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "serenity",
+	"version": "${version}",
+	"name": "Serenity: Reforged",
+	"description": "Mod that implements objects that Cataclysm: Starscorched does not",
+	"authors": [
+		"sweetcoconut"
+	],
+	"contact": {
+		"homepage": "https://github.com/justanothernormalusername/",
+		"sources": "https://github.com/justanothernormalusername/Serenity-Reforged"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/serenity/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.serenity.SerenityReforged"
+		],
+		"fabric-datagen": [
+			"com.serenity.SerenityReforgedDataGenerator"
+		],
+		"client": [
+			"com.serenity.SerenityReforgedClient"
+		]
+	},
+	"mixins": [
+		"serenity.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
