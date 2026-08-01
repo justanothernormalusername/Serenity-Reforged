@@ -25,11 +25,15 @@ public class ModItemGroups {
                         entries.add(ModItems.POLISHED_SUNSTONE);
                         entries.add(ModBlocks.SUNSTONE_BLOCK);
                         entries.add(ModBlocks.POLISHED_SUNSTONE_BLOCK);
+                        entries.add(ModBlocks.SWEDISH_MEATBALL_BLOCK);
 
                         entries.add(ModBlocks.GRANITE_GEM_ORE);
                         entries.add(ModBlocks.ALTAR_BLOCK);
 
                         entries.add(ModItems.SANDPAPER);
+
+                        entries.add(ModItems.SWEDISH_MEATBALLS);
+                        entries.add(ModItems.ICED_TEA);
                     })
                     .build()
     );

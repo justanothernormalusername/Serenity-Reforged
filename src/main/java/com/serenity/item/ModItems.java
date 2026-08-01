@@ -1,6 +1,7 @@
 package com.serenity.item;
 
 import com.serenity.SerenityReforged;
+import com.serenity.item.custom.IcedTeaItem;
 import com.serenity.item.custom.SandpaperItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -15,6 +16,9 @@ public class ModItems {
     public static final Item POLISHED_SUNSTONE = registerItem("polished_sunstone", new Item(new Item.Settings()));
 
     public static final Item SANDPAPER = registerItem("sandpaper", new SandpaperItem(new Item.Settings().maxDamage(16)));
+
+    public static final Item SWEDISH_MEATBALLS = registerItem("swedish_meatballs", new Item(new Item.Settings().food(ModFoodComponents.SWEDISH_MEATBALLS)));
+    public static final Item ICED_TEA = registerItem("iced_tea", new IcedTeaItem(new Item.Settings().food(ModFoodComponents.ICED_TEA)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(SerenityReforged.MOD_ID, name), item);

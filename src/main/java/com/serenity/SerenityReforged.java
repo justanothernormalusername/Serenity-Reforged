@@ -5,6 +5,7 @@ import com.serenity.item.ModItemGroups;
 import com.serenity.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
@@ -27,6 +28,8 @@ public class SerenityReforged implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		FuelRegistry.INSTANCE.add(ModBlocks.SWEDISH_MEATBALL_BLOCK, 400);
 	}
 
 	public static Identifier id(String path) {

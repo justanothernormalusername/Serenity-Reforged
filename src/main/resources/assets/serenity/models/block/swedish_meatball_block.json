@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "serenity:block/swedish_meatball_block"
+  }
+}
