@@ -4,6 +4,7 @@
     "serenity:moonstone_block",
     "serenity:polished_moonstone_block",
     "serenity:sunstone_block",
-    "serenity:polished_sunstone_block"
+    "serenity:polished_sunstone_block",
+    "serenity:altar_block"
   ]
 }

@@ -1,6 +1,7 @@
 package com.serenity.block;
 
 import com.serenity.SerenityReforged;
+import com.serenity.block.custom.AltarBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -32,6 +33,10 @@ public class ModBlocks {
     public static final Block GRANITE_GEM_ORE = registerBlock(
             "granite_gem_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.GLASS))
+    );
+    public static final Block ALTAR_BLOCK = registerBlock(
+            "altar_block",
+            new AltarBlock(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS))
     );
 
 

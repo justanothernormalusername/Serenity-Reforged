@@ -27,6 +27,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.POLISHED_SUNSTONE_BLOCK);
 
                         entries.add(ModBlocks.GRANITE_GEM_ORE);
+                        entries.add(ModBlocks.ALTAR_BLOCK);
 
                         entries.add(ModItems.SANDPAPER);
                     })
