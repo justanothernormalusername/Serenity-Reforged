@@ -1,7 +1,15 @@
 {
   "item.serenity.moonstone": "Moonstone",
   "item.serenity.polished_moonstone": "Polished Moonstone",
+  "item.serenity.sunstone": "Sunstone",
+  "item.serenity.polished_sunstone": "Polished Sunstone",
 
   "block.serenity.moonstone_block": "Moonstone Block",
-  "block.serenity.polished_moonstone_block": "Polished Moonstone Block"
+  "block.serenity.polished_moonstone_block": "Polished Moonstone Block",
+  "block.serenity.sunstone_block": "Sunstone Block",
+  "block.serenity.polished_sunstone_block": "Polished Sunstone Block",
+
+  "block.serenity.granite_gem_ore": "Granite Gem Ore",
+
+  "itemgroup.serenity.serenity_items": "Serenity: Reforged"
 }

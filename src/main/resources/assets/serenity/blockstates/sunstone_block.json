@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "serenity:block/sunstone_block"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "serenity:granite_gem_ore",
+    "serenity:moonstone_block",
+    "serenity:polished_moonstone_block",
+    "serenity:moonstone_block",
+    "serenity:polished_moonstone_block"
+  ]
+}
