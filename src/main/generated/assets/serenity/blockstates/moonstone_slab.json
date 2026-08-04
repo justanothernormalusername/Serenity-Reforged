@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "serenity:block/moonstone_slab"
+    },
+    "type=double": {
+      "model": "serenity:block/moonstone_block"
+    },
+    "type=top": {
+      "model": "serenity:block/moonstone_slab_top"
+    }
+  }
+}

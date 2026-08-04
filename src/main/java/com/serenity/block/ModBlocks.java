@@ -2,9 +2,7 @@ package com.serenity.block;
 
 import com.serenity.SerenityReforged;
 import com.serenity.block.custom.AltarBlock;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -57,6 +55,47 @@ public class ModBlocks {
                     super.appendTooltip(stack, context, tooltip, options);
                 }
             });
+    public static final Block MOONSTONE_STAIRS = registerBlock(
+            "moonstone_stairs",
+            new StairsBlock(ModBlocks.MOONSTONE_BLOCK.getDefaultState(),
+                    AbstractBlock.Settings.create().strength(3f).requiresTool())
+    );
+    public static final Block MOONSTONE_SLAB = registerBlock(
+            "moonstone_slab",
+            new SlabBlock(AbstractBlock.Settings.create().strength(3f).requiresTool())
+    );
+
+    public static final Block MOONSTONE_BUTTON = registerBlock(
+            "moonstone_button",
+            new ButtonBlock(BlockSetType.IRON, 100, AbstractBlock.Settings.create().strength(3f).requiresTool().noCollision())
+    );
+    public static final Block MOONSTONE_PRESSURE_PLATE = registerBlock(
+            "moonstone_pressure_plate",
+            new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.create().strength(3f).requiresTool())
+    );
+
+    public static final Block MOONSTONE_FENCE = registerBlock(
+            "moonstone_fence",
+            new FenceBlock(AbstractBlock.Settings.create().strength(3f).requiresTool())
+    );
+    public static final Block MOONSTONE_FENCE_GATE = registerBlock(
+            "moonstone_fence_gate",
+            new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.create().strength(3f).requiresTool())
+    );
+    public static final Block MOONSTONE_WALL = registerBlock(
+            "moonstone_wall",
+            new WallBlock(AbstractBlock.Settings.create().strength(3f).requiresTool())
+    );
+
+    public static final Block MOONSTONE_DOOR = registerBlock(
+            "moonstone_door",
+            new DoorBlock(BlockSetType.CHERRY, AbstractBlock.Settings.create().strength(3f).requiresTool().nonOpaque())
+    );
+    public static final Block MOONSTONE_TRAPDOOR = registerBlock(
+            "moonstone_trapdoor",
+            new TrapdoorBlock(BlockSetType.CHERRY, AbstractBlock.Settings.create().strength(3f).requiresTool().nonOpaque())
+    );
+
 
 
     private static Block registerBlock(String name, Block block) {

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "serenity:block/moonstone_pressure_plate"
+    },
+    "powered=true": {
+      "model": "serenity:block/moonstone_pressure_plate_down"
+    }
+  }
+}

@@ -61,5 +61,16 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                         .apply(ExplosionDecayLootFunction.builder())
                         ))
         ));
+
+        addDrop(ModBlocks.MOONSTONE_STAIRS);
+        addDrop(ModBlocks.MOONSTONE_WALL);
+        addDrop(ModBlocks.MOONSTONE_BUTTON);
+        addDrop(ModBlocks.MOONSTONE_TRAPDOOR);
+        addDrop(ModBlocks.MOONSTONE_FENCE);
+        addDrop(ModBlocks.MOONSTONE_FENCE_GATE);
+        addDrop(ModBlocks.MOONSTONE_PRESSURE_PLATE);
+
+        addDrop(ModBlocks.MOONSTONE_SLAB, slabDrops(ModBlocks.MOONSTONE_SLAB));
+        addDrop(ModBlocks.MOONSTONE_DOOR, doorDrops(ModBlocks.MOONSTONE_DOOR));
     }
 }

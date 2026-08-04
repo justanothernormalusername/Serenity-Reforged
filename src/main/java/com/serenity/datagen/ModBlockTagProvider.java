@@ -26,5 +26,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.GRANITE_GEM_ORE);
+
+        getOrCreateTagBuilder(BlockTags.FENCES).add(ModBlocks.MOONSTONE_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.MOONSTONE_FENCE_GATE);
+        getOrCreateTagBuilder(BlockTags.WALLS).add(ModBlocks.MOONSTONE_WALL);
     }
 }

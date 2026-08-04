@@ -19,6 +19,18 @@
   "block.serenity.altar_block": "Altar",
   "block.serenity.swedish_meatball_block": "Swedish Meatball Block",
 
+  "block.serenity.moonstone_wall": "Moonstone Wall",
+  "block.serenity.moonstone_door": "Moonstone Door",
+  "block.serenity.moonstone_fence": "Moonstone Fence",
+  "block.serenity.moonstone_fence_gate": "Moonstone Fence Gate",
+  "block.serenity.moonstone_trapdoor": "Moonstone Trapdoor",
+  "block.serenity.moonstone_button": "Moonstone Button",
+  "block.serenity.moonstone_pressure_plate": "Moonstone Pressure Plate",
+  "block.serenity.moonstone_slab": "Moonstone Slab",
+  "block.serenity.moonstone_stairs": "Moonstone Stairs",
+
+  "tag.item.serenity.transformable_items": "Transformable Items",
+
   "tooltip.serenity.sandpaper": "Press §eShift§r for more information!",
   "tooltip.serenity.sandpaper.shift_down": "Polish your stones with this dubious piece of paper!",
 

@@ -34,6 +34,16 @@ public class ModItemGroups {
 
                         entries.add(ModItems.SWEDISH_MEATBALLS);
                         entries.add(ModItems.ICED_TEA);
+
+                        entries.add(ModBlocks.MOONSTONE_BUTTON);
+                        entries.add(ModBlocks.MOONSTONE_DOOR);
+                        entries.add(ModBlocks.MOONSTONE_TRAPDOOR);
+                        entries.add(ModBlocks.MOONSTONE_FENCE);
+                        entries.add(ModBlocks.MOONSTONE_FENCE_GATE);
+                        entries.add(ModBlocks.MOONSTONE_PRESSURE_PLATE);
+                        entries.add(ModBlocks.MOONSTONE_STAIRS);
+                        entries.add(ModBlocks.MOONSTONE_SLAB);
+                        entries.add(ModBlocks.MOONSTONE_WALL);
                     })
                     .build()
     );
