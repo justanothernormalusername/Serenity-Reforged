@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sunstone_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "serenity:sunstone_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "serenity:sunstone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sunstone_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "serenity:sunstone"
+    ]
+  }
+}

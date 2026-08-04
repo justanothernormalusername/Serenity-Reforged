@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_moonstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "serenity:polished_moonstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "serenity:polished_moonstone_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_moonstone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "serenity:polished_moonstone_block"
+    ]
+  }
+}

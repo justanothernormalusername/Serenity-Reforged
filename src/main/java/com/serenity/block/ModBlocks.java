@@ -38,7 +38,10 @@ public class ModBlocks {
     );
     public static final Block GRANITE_GEM_ORE = registerBlock(
             "granite_gem_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.GLASS))
+            new ExperienceDroppingBlock(
+                    UniformIntProvider.create(3, 7),
+                    AbstractBlock.Settings.create().strength(3f, 3f).requiresTool().sounds(BlockSoundGroup.GLASS)
+            )
     );
     public static final Block ALTAR_BLOCK = registerBlock(
             "altar_block",
