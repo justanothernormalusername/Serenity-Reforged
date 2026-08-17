@@ -1,10 +1,13 @@
 package com.serenity;
 
 import com.serenity.block.ModBlocks;
+import com.serenity.component.ModDataComponentTypes;
 import com.serenity.item.ModItemGroups;
 import com.serenity.item.ModItems;
+import com.serenity.util.HammerUsageEvent;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.util.Identifier;
 
@@ -29,7 +32,11 @@ public class SerenityReforged implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
+		ModDataComponentTypes.registerDataComponentTypes();
+
 		FuelRegistry.INSTANCE.add(ModBlocks.SWEDISH_MEATBALL_BLOCK, 400);
+
+		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 	}
 
 	public static Identifier id(String path) {

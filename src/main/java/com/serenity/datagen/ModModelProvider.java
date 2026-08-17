@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -44,5 +45,24 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ICED_TEA, Models.GENERATED);
         itemModelGenerator.register(ModItems.SANDPAPER, Models.GENERATED);
         itemModelGenerator.register(ModItems.SWEDISH_MEATBALLS, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.MOONSTONE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MOONSTONE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MOONSTONE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MOONSTONE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MOONSTONE_HOE, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.SUNSTONE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SUNSTONE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SUNSTONE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SUNSTONE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SUNSTONE_HOE, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.GEMSTONE_HAMMER, Models.HANDHELD);
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.MOONSTONE_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.MOONSTONE_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.MOONSTONE_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.MOONSTONE_BOOTS);
     }
 }

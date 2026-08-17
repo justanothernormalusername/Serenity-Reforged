@@ -44,6 +44,25 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MOONSTONE_STAIRS);
                         entries.add(ModBlocks.MOONSTONE_SLAB);
                         entries.add(ModBlocks.MOONSTONE_WALL);
+
+                        entries.add(ModItems.MOONSTONE_AXE);
+                        entries.add(ModItems.MOONSTONE_PICKAXE);
+                        entries.add(ModItems.MOONSTONE_SHOVEL);
+                        entries.add(ModItems.MOONSTONE_SWORD);
+                        entries.add(ModItems.MOONSTONE_HOE);
+
+                        entries.add(ModItems.SUNSTONE_AXE);
+                        entries.add(ModItems.SUNSTONE_PICKAXE);
+                        entries.add(ModItems.SUNSTONE_SHOVEL);
+                        entries.add(ModItems.SUNSTONE_SWORD);
+                        entries.add(ModItems.SUNSTONE_HOE);
+
+                        entries.add(ModItems.GEMSTONE_HAMMER);
+
+                        entries.add(ModItems.MOONSTONE_HELMET);
+                        entries.add(ModItems.MOONSTONE_CHESTPLATE);
+                        entries.add(ModItems.MOONSTONE_LEGGINGS);
+                        entries.add(ModItems.MOONSTONE_BOOTS);
                     })
                     .build()
     );

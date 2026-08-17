@@ -1,6 +1,7 @@
 package com.serenity.datagen;
 
 import com.serenity.block.ModBlocks;
+import com.serenity.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -30,5 +31,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.FENCES).add(ModBlocks.MOONSTONE_FENCE);
         getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.MOONSTONE_FENCE_GATE);
         getOrCreateTagBuilder(BlockTags.WALLS).add(ModBlocks.MOONSTONE_WALL);
+
+        // Uses optional tag to prevent datagen referencing vanilla tag before loading
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_GEM_TOOL).addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL.id());
     }
 }

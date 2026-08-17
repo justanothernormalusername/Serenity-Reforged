@@ -1,2 +1,8 @@
-// 1.21.1	2026-08-04T14:56:11.8152615	Serenity: Reforged/Tags for minecraft:item
+// 1.21.1	2026-08-16T17:57:00.1944321	Serenity: Reforged/Tags for minecraft:item
+28b06025e595da278da5b57af39748146f4e3cbd data\minecraft\tags\item\axes.json
+4df8be9814641edfb6d9bf0a82e2b9dfc6caae1a data\minecraft\tags\item\hoes.json
+1b15323e7b337c9770e6307a28894ddb65881314 data\minecraft\tags\item\shovels.json
+d7d56dfe1731eceefc68231b76e28e59e80b9bac data\minecraft\tags\item\swords.json
+b9cd95f51c639bcf52c363ace80e85b41772732d data\minecraft\tags\item\pickaxes.json
 540d3b7cd8ec7214572320c53da72e16ce4cbf9e data\serenity\tags\item\transformable_items.json
+323d691a02c7804ae9d3c0223dd5d166f246f791 data\minecraft\tags\item\trimmable_armor.json

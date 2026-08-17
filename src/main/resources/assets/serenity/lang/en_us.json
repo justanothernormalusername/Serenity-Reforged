@@ -10,6 +10,26 @@
   "item.serenity.swedish_meatballs": "Swedish Meatballs",
   "item.serenity.iced_tea": "Iced Tea",
 
+  "item.serenity.moonstone_sword": "Moonstone Sword",
+  "item.serenity.moonstone_axe": "Moonstone Axe",
+  "item.serenity.moonstone_shovel": "Moonstone Shovel",
+  "item.serenity.moonstone_pickaxe": "Moonstone Pickaxe",
+  "item.serenity.moonstone_hoe": "Moonstone Hoe",
+
+  "item.serenity.sunstone_sword": "Sunstone Sword",
+  "item.serenity.sunstone_axe": "Sunstone Axe",
+  "item.serenity.sunstone_shovel": "Sunstone Shovel",
+  "item.serenity.sunstone_pickaxe": "Sunstone Pickaxe",
+  "item.serenity.sunstone_hoe": "Sunstone Hoe",
+
+  "item.serenity.gemstone_hammer": "Gemstone Hammer",
+
+  "item.serenity.moonstone_helmet": "Moonstone Helmet",
+  "item.serenity.moonstone_chestplate": "Moonstone Chestplate",
+  "item.serenity.moonstone_leggings": "Moonstone Leggings",
+  "item.serenity.moonstone_boots": "Moonstone Boots",
+
+
   "block.serenity.moonstone_block": "Moonstone Block",
   "block.serenity.polished_moonstone_block": "Polished Moonstone Block",
   "block.serenity.sunstone_block": "Sunstone Block",
