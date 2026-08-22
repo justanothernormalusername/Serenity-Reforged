@@ -63,6 +63,8 @@ public class ModItemGroups {
                         entries.add(ModItems.MOONSTONE_CHESTPLATE);
                         entries.add(ModItems.MOONSTONE_LEGGINGS);
                         entries.add(ModItems.MOONSTONE_BOOTS);
+
+                        entries.add(ModBlocks.GRINDSTONE);
                     })
                     .build()
     );

@@ -2,6 +2,7 @@ package com.serenity.block;
 
 import com.serenity.SerenityReforged;
 import com.serenity.block.custom.AltarBlock;
+import com.serenity.block.custom.GrindstoneBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -95,6 +96,9 @@ public class ModBlocks {
             "moonstone_trapdoor",
             new TrapdoorBlock(BlockSetType.CHERRY, AbstractBlock.Settings.create().strength(3f).requiresTool().nonOpaque())
     );
+
+    public static final Block GRINDSTONE = registerBlock("grindstone",
+            new GrindstoneBlock(AbstractBlock.Settings.create().nonOpaque()));
 
 
 

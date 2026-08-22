@@ -49,13 +49,14 @@
   "block.serenity.moonstone_slab": "Moonstone Slab",
   "block.serenity.moonstone_stairs": "Moonstone Stairs",
 
+  "block.serenity.grindstone": "Lapidary Grindstone",
+
   "tag.item.serenity.transformable_items": "Transformable Items",
 
   "tooltip.serenity.sandpaper": "Press §eShift§r for more information!",
   "tooltip.serenity.sandpaper.shift_down": "Polish your stones with this dubious piece of paper!",
 
   "tooltop.serenity.altar_block.tooltip": "This block is §8sus§r",
-  "tooltip.serenity.swedish_meatball_block": "Burnable but not edible?"
-
-
+  "tooltip.serenity.swedish_meatball_block": "Burnable but not edible?",
+  "container.serenity.grindstone": "Lapidary Grindstone"
 }
