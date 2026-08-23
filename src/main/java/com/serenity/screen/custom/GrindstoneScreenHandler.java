@@ -1,25 +1,32 @@
 package com.serenity.screen.custom;
 
+import com.serenity.block.entity.custom.GrindstoneBlockEntity;
 import com.serenity.screen.ModScreenHandlers;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.screen.ArrayPropertyDelegate;
+import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.util.math.BlockPos;
 
 public class GrindstoneScreenHandler extends ScreenHandler {
     private final Inventory inventory;
+    private final PropertyDelegate propertyDelegate;
+    public final GrindstoneBlockEntity blockEntity;
 
     public GrindstoneScreenHandler(int syncId, PlayerInventory playerInventory, BlockPos pos) {
-        this(syncId, playerInventory, playerInventory.player.getWorld().getBlockEntity(pos));
+        this(syncId, playerInventory, playerInventory.player.getWorld().getBlockEntity(pos), new ArrayPropertyDelegate(2));
     }
 
-    public GrindstoneScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity) {
+    public GrindstoneScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
         super(ModScreenHandlers.GRINDSTONE_SCREEN_HANDLER, syncId);
         this.inventory = ((Inventory) blockEntity);
+        this.blockEntity = ((GrindstoneBlockEntity) blockEntity);
+        this.propertyDelegate = arrayPropertyDelegate;
 
         this.addSlot(new Slot(inventory, 0, 26, 35));
 
@@ -33,7 +40,22 @@ public class GrindstoneScreenHandler extends ScreenHandler {
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
+
+        addProperties(arrayPropertyDelegate);
     }
+
+    public boolean isCrafting() {
+        return propertyDelegate.get(0) > 0;
+    }
+
+    public int getScaledArrowProgress() {
+        int progress = this.propertyDelegate.get(0);
+        int maxProgress = this.propertyDelegate.get(1);
+        int arrowPixelSize = 24;  // width of arrow in pixels
+
+        return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
+    }
+
 
     @Override
     public ItemStack quickMove(PlayerEntity player, int invSlot) {

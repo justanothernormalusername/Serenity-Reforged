@@ -12,6 +12,8 @@ import net.minecraft.util.Identifier;
 public class GrindstoneScreen extends HandledScreen<GrindstoneScreenHandler> {
     public static final Identifier GUI_TEXTURE =
             Identifier.of(SerenityReforged.MOD_ID, "textures/gui/grindstone/grindstone_gui.png");
+    public static final Identifier ARROW_TEXTURE =
+            Identifier.of(SerenityReforged.MOD_ID, "textures/gui/arrow_progress.png");
 
     public GrindstoneScreen(GrindstoneScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
@@ -27,6 +29,15 @@ public class GrindstoneScreen extends HandledScreen<GrindstoneScreenHandler> {
         int y = (height - backgroundHeight) / 2;
 
         context.drawTexture(GUI_TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight);
+
+        renderProgressArrow(context, x, y);
+    }
+
+    private void renderProgressArrow(DrawContext context, int x, int y) {
+        if(handler.isCrafting()) {
+            context.drawTexture(ARROW_TEXTURE, x + 73, y + 35, 0, 0,
+                    handler.getScaledArrowProgress(), 16, 24, 16);
+        }
     }
 
     @Override
