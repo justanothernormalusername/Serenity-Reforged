@@ -5,6 +5,7 @@ import com.serenity.block.entity.ModBlockEntities;
 import com.serenity.component.ModDataComponentTypes;
 import com.serenity.item.ModItemGroups;
 import com.serenity.item.ModItems;
+import com.serenity.recipe.ModRecipes;
 import com.serenity.screen.ModScreenHandlers;
 import com.serenity.util.HammerUsageEvent;
 import net.fabricmc.api.ModInitializer;
@@ -39,6 +40,8 @@ public class SerenityReforged implements ModInitializer {
 		ModBlockEntities.registerBlockEntities();
 
 		ModScreenHandlers.registerScreenHandlers();
+
+		ModRecipes.registerRecipes();
 
 		FuelRegistry.INSTANCE.add(ModBlocks.SWEDISH_MEATBALL_BLOCK, 400);
 

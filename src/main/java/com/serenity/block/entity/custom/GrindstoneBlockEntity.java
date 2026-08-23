@@ -3,6 +3,9 @@ package com.serenity.block.entity.custom;
 import com.serenity.block.entity.ImplementedInventory;
 import com.serenity.block.entity.ModBlockEntities;
 import com.serenity.item.ModItems;
+import com.serenity.recipe.GrindstoneRecipe;
+import com.serenity.recipe.GrindstoneRecipeInput;
+import com.serenity.recipe.ModRecipes;
 import com.serenity.screen.custom.GrindstoneScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
@@ -16,6 +19,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
+import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -25,6 +29,8 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class GrindstoneBlockEntity extends BlockEntity implements ImplementedInventory, ExtendedScreenHandlerFactory<BlockPos> {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(7, ItemStack.EMPTY);
@@ -100,10 +106,7 @@ public class GrindstoneBlockEntity extends BlockEntity implements ImplementedInv
             markDirty(world, pos, state);
 
             if(this.progress >= maxProgress) {
-                ItemStack output = new ItemStack(ModItems.POLISHED_MOONSTONE, 2);
-                this.removeStack(GEM_INPUT_SLOT, 1);
-                this.setStack(GEM_OUTPUT_SLOT, new ItemStack(output.getItem(),
-                        this.getStack(GEM_OUTPUT_SLOT).getCount() + output.getCount()));
+                craftItem();
 
                 // Reset progress
                 this.progress = 0;
@@ -115,12 +118,28 @@ public class GrindstoneBlockEntity extends BlockEntity implements ImplementedInv
             this.maxProgress = 72;
         }
     }
+    private void craftItem() {
+        Optional<RecipeEntry<GrindstoneRecipe>> recipe = getCurrentRecipe();
+
+        ItemStack output = recipe.get().value().output();
+        this.removeStack(GEM_INPUT_SLOT, 1);
+        this.setStack(GEM_OUTPUT_SLOT, new ItemStack(output.getItem(),
+                this.getStack(GEM_OUTPUT_SLOT).getCount() + output.getCount()));
+    }
 
     private boolean hasRecipe() {
-        Item input = ModItems.MOONSTONE;
-        ItemStack output = new ItemStack(ModItems.POLISHED_MOONSTONE, 2);
+        Optional<RecipeEntry<GrindstoneRecipe>> recipe = getCurrentRecipe();
+        if(recipe.isEmpty()) {
+            return false;
+        }
 
-        return this.getStack(GEM_INPUT_SLOT).isOf(input) && canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+        ItemStack output = recipe.get().value().output();
+        return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+    }
+
+    private Optional<RecipeEntry<GrindstoneRecipe>> getCurrentRecipe() {
+        return this.getWorld().getRecipeManager()
+                .getFirstMatch(ModRecipes.GRINDSTONE_RECIPE_RECIPE_TYPE, new GrindstoneRecipeInput(inventory.get(GEM_INPUT_SLOT)), this.getWorld());
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {

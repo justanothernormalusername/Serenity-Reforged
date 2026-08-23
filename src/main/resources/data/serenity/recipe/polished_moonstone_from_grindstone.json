@@ -1,0 +1,10 @@
+{
+  "type": "serenity:grindstone",
+  "ingredient": {
+    "item": "serenity:moonstone"
+  },
+  "result": {
+    "count": 2,
+    "id": "serenity:polished_moonstone"
+  }
+}
