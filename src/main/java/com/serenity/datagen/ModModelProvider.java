@@ -8,6 +8,10 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -38,31 +42,47 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.MOONSTONE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.POLISHED_MOONSTONE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SUNSTONE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.POLISHED_SUNSTONE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ICED_TEA, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SANDPAPER, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SWEDISH_MEATBALLS, Models.GENERATED);
+        List<Item> unregisteredItems = new ArrayList<Item>(ModItems.ALL_MOD_ITEMS);
 
         itemModelGenerator.register(ModItems.MOONSTONE_SWORD, Models.HANDHELD);
+        unregisteredItems.remove(ModItems.MOONSTONE_SWORD);
         itemModelGenerator.register(ModItems.MOONSTONE_AXE, Models.HANDHELD);
+        unregisteredItems.remove(ModItems.MOONSTONE_AXE);
         itemModelGenerator.register(ModItems.MOONSTONE_PICKAXE, Models.HANDHELD);
+        unregisteredItems.remove(ModItems.MOONSTONE_PICKAXE);
         itemModelGenerator.register(ModItems.MOONSTONE_SHOVEL, Models.HANDHELD);
+        unregisteredItems.remove(ModItems.MOONSTONE_SHOVEL);
         itemModelGenerator.register(ModItems.MOONSTONE_HOE, Models.HANDHELD);
+        unregisteredItems.remove(ModItems.MOONSTONE_HOE);
 
         itemModelGenerator.register(ModItems.SUNSTONE_SWORD, Models.HANDHELD);
+        unregisteredItems.remove(ModItems.SUNSTONE_SWORD);
         itemModelGenerator.register(ModItems.SUNSTONE_AXE, Models.HANDHELD);
+        unregisteredItems.remove(ModItems.SUNSTONE_AXE);
         itemModelGenerator.register(ModItems.SUNSTONE_PICKAXE, Models.HANDHELD);
+        unregisteredItems.remove(ModItems.SUNSTONE_PICKAXE);
         itemModelGenerator.register(ModItems.SUNSTONE_SHOVEL, Models.HANDHELD);
+        unregisteredItems.remove(ModItems.SUNSTONE_SHOVEL);
         itemModelGenerator.register(ModItems.SUNSTONE_HOE, Models.HANDHELD);
+        unregisteredItems.remove(ModItems.SUNSTONE_HOE);
 
         itemModelGenerator.register(ModItems.GEMSTONE_HAMMER, Models.HANDHELD);
+        unregisteredItems.remove(ModItems.GEMSTONE_HAMMER);
+
 
         itemModelGenerator.registerArmor((ArmorItem) ModItems.MOONSTONE_HELMET);
+        unregisteredItems.remove(ModItems.MOONSTONE_HELMET);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.MOONSTONE_CHESTPLATE);
+        unregisteredItems.remove(ModItems.MOONSTONE_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.MOONSTONE_LEGGINGS);
+        unregisteredItems.remove(ModItems.MOONSTONE_LEGGINGS);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.MOONSTONE_BOOTS);
+        unregisteredItems.remove(ModItems.MOONSTONE_BOOTS);
+
+
+        // Autogenerate rest as Models.GENERATED
+        for (Item unregisteredItem : unregisteredItems) {
+            itemModelGenerator.register(unregisteredItem, Models.GENERATED);
+        }
     }
 }

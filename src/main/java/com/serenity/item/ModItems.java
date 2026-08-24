@@ -1,16 +1,27 @@
 package com.serenity.item;
 
 import com.serenity.SerenityReforged;
+import com.serenity.datagen.ModDamageTypes;
 import com.serenity.item.custom.HammerItem;
 import com.serenity.item.custom.IcedTeaItem;
 import com.serenity.item.custom.ModArmorItem;
 import com.serenity.item.custom.SandpaperItem;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.UseAction;
+import net.minecraft.world.World;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModItems {
+    public static final List<Item> ALL_MOD_ITEMS = new ArrayList<>();
+
     public static final Item MOONSTONE = registerItem("moonstone", new Item(new Item.Settings()));
     public static final Item POLISHED_MOONSTONE = registerItem("polished_moonstone", new Item(new Item.Settings()));
 
@@ -60,8 +71,59 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.MOONSTONE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(15))));
 
+    public static final Item HONEY_DOP_STICK = registerItem("honey_dop_stick", new Item(new Item.Settings()));
+    public static final Item SLIME_DOP_STICK = registerItem("slime_dop_stick", new Item(new Item.Settings()));
+    public static final Item INFERNAL_DOP_STICK = registerItem("infernal_dop_stick", new Item(new Item.Settings()));
+
+    public static final Item LOUPE = registerItem("loupe", new Item(new Item.Settings().maxCount(1)));
+
+    public static final Item STONE_GEODE = registerItem("stone_geode", new Item(new Item.Settings()));
+    public static final Item DEEPSLATE_GEODE = registerItem("deepslate_geode", new Item(new Item.Settings()));
+    public static final Item ANDESITE_GEODE = registerItem("andesite_geode", new Item(new Item.Settings()));
+    public static final Item DIORITE_GEODE = registerItem("diorite_geode", new Item(new Item.Settings()));
+    public static final Item GRANITE_GEODE = registerItem("granite_geode", new Item(new Item.Settings()));
+    public static final Item BLACKSTONE_GEODE = registerItem("blackstone_geode", new Item(new Item.Settings()));
+
+    public static final Item BRINE_BOTTLE = registerItem("brine_bottle",
+            new Item(new Item.Settings().food(ModFoodComponents.BRINE_BOTTLE).maxCount(16)) {
+                @Override
+                public UseAction getUseAction(ItemStack stack) {
+                    return UseAction.DRINK;
+                }
+
+                @Override
+                public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
+                    if (!world.isClient() && user instanceof PlayerEntity player) {
+                        player.addExhaustion(16f);
+                    }
+
+                    return super.finishUsing(stack, world, user);
+                }
+            }
+    );
+
+    public static final Item CLAY_SLURRY_BOTTLE = registerItem("clay_slurry_bottle",
+            new Item(new Item.Settings().food(ModFoodComponents.CLAY_SLURRY_BOTTLE).maxCount(16)) {
+                @Override
+                public UseAction getUseAction(ItemStack stack) {
+                    return UseAction.DRINK;
+                }
+
+                @Override
+                public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
+                    if (!world.isClient() && user instanceof PlayerEntity player) {
+                        player.damage(ModDamageTypes.create(world, ModDamageTypes.SLURRY), 4f);
+                    }
+
+                    return super.finishUsing(stack, world, user);
+                }
+            }
+    );
+
     private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, Identifier.of(SerenityReforged.MOD_ID, name), item);
+        Item registeredItem = Registry.register(Registries.ITEM, Identifier.of(SerenityReforged.MOD_ID, name), item);
+        ALL_MOD_ITEMS.add(registeredItem);
+        return registeredItem;
     }
 
     public static void registerModItems() {

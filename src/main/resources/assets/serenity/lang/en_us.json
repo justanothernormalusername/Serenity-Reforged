@@ -29,6 +29,22 @@
   "item.serenity.moonstone_leggings": "Moonstone Leggings",
   "item.serenity.moonstone_boots": "Moonstone Boots",
 
+  "item.serenity.honey_dop_stick": "Honey Dop Stick",
+  "item.serenity.slime_dop_stick": "Slime Dop Stick",
+  "item.serenity.infernal_dop_stick": "Infernal Dop Stick",
+
+  "item.serenity.loupe": "Loupe",
+
+  "item.serenity.stone_geode": "Stone Geode",
+  "item.serenity.deepslate_geode": "Deepslate Geode",
+  "item.serenity.andesite_geode": "Andesite Geode",
+  "item.serenity.diorite_geode": "Diorite Geode",
+  "item.serenity.granite_geode": "Granite Geode",
+  "item.serenity.blackstone_geode": "Blackstone Geode",
+
+  "item.serenity.brine_bottle": "Bottle of Brine",
+  "item.serenity.clay_slurry_bottle": "Bottle of Clay Slurry",
+
 
   "block.serenity.moonstone_block": "Moonstone Block",
   "block.serenity.polished_moonstone_block": "Polished Moonstone Block",
@@ -58,5 +74,7 @@
 
   "tooltop.serenity.altar_block.tooltip": "This block is §8sus§r",
   "tooltip.serenity.swedish_meatball_block": "Burnable but not edible?",
-  "container.serenity.grindstone": "Lapidary Grindstone"
+  "container.serenity.grindstone": "Lapidary Grindstone",
+
+  "death.attack.slurry": "%1$s became a human brick"
 }

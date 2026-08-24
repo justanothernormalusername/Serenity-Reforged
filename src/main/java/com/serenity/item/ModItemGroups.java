@@ -3,6 +3,8 @@ package com.serenity.item;
 import com.serenity.SerenityReforged;
 import com.serenity.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -17,54 +19,12 @@ public class ModItemGroups {
                     new ItemStack(ModItems.MOONSTONE))
                     .displayName(Text.translatable("itemgroup.serenity.serenity_items"))
                     .entries((displayContext, entries) -> {
-                        entries.add(ModItems.MOONSTONE);
-                        entries.add(ModItems.POLISHED_MOONSTONE);
-                        entries.add(ModBlocks.MOONSTONE_BLOCK);
-                        entries.add(ModBlocks.POLISHED_MOONSTONE_BLOCK);
-                        entries.add(ModItems.SUNSTONE);
-                        entries.add(ModItems.POLISHED_SUNSTONE);
-                        entries.add(ModBlocks.SUNSTONE_BLOCK);
-                        entries.add(ModBlocks.POLISHED_SUNSTONE_BLOCK);
-                        entries.add(ModBlocks.SWEDISH_MEATBALL_BLOCK);
-
-                        entries.add(ModBlocks.GRANITE_GEM_ORE);
-                        entries.add(ModBlocks.ALTAR_BLOCK);
-
-                        entries.add(ModItems.SANDPAPER);
-
-                        entries.add(ModItems.SWEDISH_MEATBALLS);
-                        entries.add(ModItems.ICED_TEA);
-
-                        entries.add(ModBlocks.MOONSTONE_BUTTON);
-                        entries.add(ModBlocks.MOONSTONE_DOOR);
-                        entries.add(ModBlocks.MOONSTONE_TRAPDOOR);
-                        entries.add(ModBlocks.MOONSTONE_FENCE);
-                        entries.add(ModBlocks.MOONSTONE_FENCE_GATE);
-                        entries.add(ModBlocks.MOONSTONE_PRESSURE_PLATE);
-                        entries.add(ModBlocks.MOONSTONE_STAIRS);
-                        entries.add(ModBlocks.MOONSTONE_SLAB);
-                        entries.add(ModBlocks.MOONSTONE_WALL);
-
-                        entries.add(ModItems.MOONSTONE_AXE);
-                        entries.add(ModItems.MOONSTONE_PICKAXE);
-                        entries.add(ModItems.MOONSTONE_SHOVEL);
-                        entries.add(ModItems.MOONSTONE_SWORD);
-                        entries.add(ModItems.MOONSTONE_HOE);
-
-                        entries.add(ModItems.SUNSTONE_AXE);
-                        entries.add(ModItems.SUNSTONE_PICKAXE);
-                        entries.add(ModItems.SUNSTONE_SHOVEL);
-                        entries.add(ModItems.SUNSTONE_SWORD);
-                        entries.add(ModItems.SUNSTONE_HOE);
-
-                        entries.add(ModItems.GEMSTONE_HAMMER);
-
-                        entries.add(ModItems.MOONSTONE_HELMET);
-                        entries.add(ModItems.MOONSTONE_CHESTPLATE);
-                        entries.add(ModItems.MOONSTONE_LEGGINGS);
-                        entries.add(ModItems.MOONSTONE_BOOTS);
-
-                        entries.add(ModBlocks.GRINDSTONE);
+                        for (Item modItem : ModItems.ALL_MOD_ITEMS) {
+                            entries.add(modItem);
+                        }
+                        for (Block modBlock : ModBlocks.ALL_MOD_BLOCKS) {
+                            entries.add(modBlock);
+                        }
                     })
                     .build()
     );

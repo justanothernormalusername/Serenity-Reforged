@@ -1,5 +1,6 @@
 package com.serenity.datagen;
 
+import com.serenity.SerenityReforged;
 import com.serenity.block.ModBlocks;
 import com.serenity.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -10,6 +11,7 @@ import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -40,6 +42,51 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Items.SAND)
                 .input(Items.PAPER)
                 .criterion(hasItem(Items.PAPER), conditionsFromItem(Items.PAPER))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HONEY_DOP_STICK)
+                .pattern(" X")
+                .pattern("# ")
+                .input('X', Items.HONEYCOMB)
+                .input('#', Items.STICK)
+                .group("honey_dop_stick")
+                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
+                .offerTo(exporter, Identifier.of(SerenityReforged.MOD_ID, "honey_dop_stick_from_comb"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HONEY_DOP_STICK)
+                .pattern(" X")
+                .pattern("# ")
+                .input('X', Items.HONEY_BOTTLE)
+                .input('#', Items.STICK)
+                .group("honey_dop_stick")
+                .criterion(hasItem(Items.HONEY_BOTTLE), conditionsFromItem(Items.HONEY_BOTTLE))
+                .offerTo(exporter, Identifier.of(SerenityReforged.MOD_ID, "honey_dop_stick_from_bottle"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SLIME_DOP_STICK)
+                .pattern(" X")
+                .pattern("# ")
+                .input('X', Items.SLIME_BALL)
+                .input('#', Items.STICK)
+                .criterion(hasItem(Items.SLIME_BALL), conditionsFromItem(Items.SLIME_BALL))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.INFERNAL_DOP_STICK)
+                .pattern(" X")
+                .pattern("# ")
+                .input('X', Items.MAGMA_CREAM)
+                .input('#', Items.BLAZE_ROD)
+                .criterion(hasItem(Items.MAGMA_CREAM), conditionsFromItem(Items.MAGMA_CREAM))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LOUPE)
+                .pattern("cxc")
+                .pattern("c#c")
+                .pattern("crc")
+                .input('x', Items.GLASS_PANE)
+                .input('#', Items.AMETHYST_SHARD)
+                .input('r', Items.RABBIT_HIDE)
+                .input('c', Items.COPPER_INGOT)
+                .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
                 .offerTo(exporter);
     }
 }

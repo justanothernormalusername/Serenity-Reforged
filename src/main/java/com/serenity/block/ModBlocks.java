@@ -16,9 +16,12 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ModBlocks {
+    public static final List<Block> ALL_MOD_BLOCKS = new ArrayList<>();
+
     public static final Block MOONSTONE_BLOCK = registerBlock(
             "moonstone_block",
             new Block(AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.BASALT))
@@ -103,8 +106,10 @@ public class ModBlocks {
 
 
     private static Block registerBlock(String name, Block block) {
+        Block registeredBlock = Registry.register(Registries.BLOCK, Identifier.of(SerenityReforged.MOD_ID, name), block);
+        ALL_MOD_BLOCKS.add(registeredBlock);
         registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(SerenityReforged.MOD_ID, name), block);
+        return registeredBlock;
     }
 
     private static void registerBlockItem(String name, Block block) {

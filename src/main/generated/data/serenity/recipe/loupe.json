@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "c": {
+      "item": "minecraft:copper_ingot"
+    },
+    "r": {
+      "item": "minecraft:rabbit_hide"
+    },
+    "x": {
+      "item": "minecraft:glass_pane"
+    }
+  },
+  "pattern": [
+    "cxc",
+    "c#c",
+    "crc"
+  ],
+  "result": {
+    "count": 1,
+    "id": "serenity:loupe"
+  }
+}
