@@ -1,12 +1,13 @@
 package com.serenity.datagen;
 
 import com.serenity.block.ModBlocks;
+import com.serenity.block.cauldron.SerenityCauldronBlock;
 import com.serenity.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.LeveledCauldronBlock;
+import net.minecraft.data.client.*;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 
@@ -38,6 +39,82 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerDoor(ModBlocks.MOONSTONE_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.MOONSTONE_TRAPDOOR);
+
+
+        // Brine cauldron
+        blockStateModelGenerator.blockStateCollector
+                .accept(
+                        VariantsBlockStateSupplier.create(ModBlocks.BRINE_CAULDRON)
+                                .coordinate(
+                                        BlockStateVariantMap.create(SerenityCauldronBlock.LEVEL)
+                                                .register(
+                                                        1,
+                                                        BlockStateVariant.create()
+                                                                .put(
+                                                                        VariantSettings.MODEL,
+                                                                        Models.TEMPLATE_CAULDRON_LEVEL1
+                                                                                .upload(ModBlocks.BRINE_CAULDRON, "_level1", TextureMap.cauldron(TextureMap.getSubId(Blocks.WATER, "_still")), blockStateModelGenerator.modelCollector)
+                                                                )
+                                                )
+                                                .register(
+                                                        2,
+                                                        BlockStateVariant.create()
+                                                                .put(
+                                                                        VariantSettings.MODEL,
+                                                                        Models.TEMPLATE_CAULDRON_LEVEL2
+                                                                                .upload(ModBlocks.BRINE_CAULDRON, "_level2", TextureMap.cauldron(TextureMap.getSubId(Blocks.WATER, "_still")), blockStateModelGenerator.modelCollector)
+                                                                )
+                                                )
+                                                .register(
+                                                        3,
+                                                        BlockStateVariant.create()
+                                                                .put(
+                                                                        VariantSettings.MODEL,
+                                                                        Models.TEMPLATE_CAULDRON_FULL
+                                                                                .upload(ModBlocks.BRINE_CAULDRON, "_full", TextureMap.cauldron(TextureMap.getSubId(Blocks.WATER, "_still")), blockStateModelGenerator.modelCollector)
+                                                                )
+                                                )
+                                )
+                );
+
+
+        // Clay slurry cauldron
+        blockStateModelGenerator.blockStateCollector
+                .accept(
+                        VariantsBlockStateSupplier.create(ModBlocks.CLAY_SLURRY_CAULDRON)
+                                .coordinate(
+                                        BlockStateVariantMap.create(SerenityCauldronBlock.LEVEL)
+                                                .register(
+                                                        1,
+                                                        BlockStateVariant.create()
+                                                                .put(
+                                                                        VariantSettings.MODEL,
+                                                                        Models.TEMPLATE_CAULDRON_LEVEL1
+                                                                                .upload(ModBlocks.CLAY_SLURRY_CAULDRON, "_level1", TextureMap.cauldron(TextureMap.getSubId(Blocks.WATER, "_still")), blockStateModelGenerator.modelCollector)
+                                                                )
+                                                )
+                                                .register(
+                                                        2,
+                                                        BlockStateVariant.create()
+                                                                .put(
+                                                                        VariantSettings.MODEL,
+                                                                        Models.TEMPLATE_CAULDRON_LEVEL2
+                                                                                .upload(ModBlocks.CLAY_SLURRY_CAULDRON, "_level2", TextureMap.cauldron(TextureMap.getSubId(Blocks.WATER, "_still")), blockStateModelGenerator.modelCollector)
+                                                                )
+                                                )
+                                                .register(
+                                                        3,
+                                                        BlockStateVariant.create()
+                                                                .put(
+                                                                        VariantSettings.MODEL,
+                                                                        Models.TEMPLATE_CAULDRON_FULL
+                                                                                .upload(ModBlocks.CLAY_SLURRY_CAULDRON, "_full", TextureMap.cauldron(TextureMap.getSubId(Blocks.WATER, "_still")), blockStateModelGenerator.modelCollector)
+                                                                )
+                                                )
+                                )
+                );
+
+
     }
 
     @Override

@@ -2,19 +2,22 @@ package com.serenity.item;
 
 import com.serenity.SerenityReforged;
 import com.serenity.datagen.ModDamageTypes;
-import com.serenity.item.custom.HammerItem;
-import com.serenity.item.custom.IcedTeaItem;
-import com.serenity.item.custom.ModArmorItem;
-import com.serenity.item.custom.SandpaperItem;
+import com.serenity.item.custom.*;
+import net.minecraft.advancement.criterion.Criteria;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.PotionContentsComponent;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.stat.Stats;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
+import net.minecraft.world.event.GameEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,40 +88,12 @@ public class ModItems {
     public static final Item BLACKSTONE_GEODE = registerItem("blackstone_geode", new Item(new Item.Settings()));
 
     public static final Item BRINE_BOTTLE = registerItem("brine_bottle",
-            new Item(new Item.Settings().food(ModFoodComponents.BRINE_BOTTLE).maxCount(16)) {
-                @Override
-                public UseAction getUseAction(ItemStack stack) {
-                    return UseAction.DRINK;
-                }
-
-                @Override
-                public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-                    if (!world.isClient() && user instanceof PlayerEntity player) {
-                        player.addExhaustion(16f);
-                    }
-
-                    return super.finishUsing(stack, world, user);
-                }
-            }
+            new BrineBottleItem(new Item.Settings().food(ModFoodComponents.BRINE_BOTTLE).maxCount(16))
     );
-
     public static final Item CLAY_SLURRY_BOTTLE = registerItem("clay_slurry_bottle",
-            new Item(new Item.Settings().food(ModFoodComponents.CLAY_SLURRY_BOTTLE).maxCount(16)) {
-                @Override
-                public UseAction getUseAction(ItemStack stack) {
-                    return UseAction.DRINK;
-                }
-
-                @Override
-                public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-                    if (!world.isClient() && user instanceof PlayerEntity player) {
-                        player.damage(ModDamageTypes.create(world, ModDamageTypes.SLURRY), 4f);
-                    }
-
-                    return super.finishUsing(stack, world, user);
-                }
-            }
+            new ClaySlurryBottleItem(new Item.Settings().food(ModFoodComponents.CLAY_SLURRY_BOTTLE).maxCount(16))
     );
+
 
     private static Item registerItem(String name, Item item) {
         Item registeredItem = Registry.register(Registries.ITEM, Identifier.of(SerenityReforged.MOD_ID, name), item);

@@ -1,6 +1,7 @@
 package com.serenity.block;
 
 import com.serenity.SerenityReforged;
+import com.serenity.block.cauldron.SerenityCauldronBlock;
 import com.serenity.block.custom.AltarBlock;
 import com.serenity.block.custom.GrindstoneBlock;
 import net.minecraft.block.*;
@@ -103,6 +104,17 @@ public class ModBlocks {
     public static final Block GRINDSTONE = registerBlock("grindstone",
             new GrindstoneBlock(AbstractBlock.Settings.create().nonOpaque()));
 
+    public static final SerenityCauldronBlock BRINE_CAULDRON = Registry.register(
+            Registries.BLOCK,
+            Identifier.of(SerenityReforged.MOD_ID, "brine_cauldron"),
+            new SerenityCauldronBlock(AbstractBlock.Settings.create().strength(3f), SerenityReforged.MOD_ID + ":brine")
+    );
+
+    public static final SerenityCauldronBlock CLAY_SLURRY_CAULDRON = Registry.register(
+            Registries.BLOCK,
+            Identifier.of(SerenityReforged.MOD_ID, "clay_slurry_cauldron"),
+            new SerenityCauldronBlock(AbstractBlock.Settings.create().strength(3f), SerenityReforged.MOD_ID + ":clay_slurry")
+    );
 
 
     private static Block registerBlock(String name, Block block) {
