@@ -18,7 +18,7 @@ public class SerenityReforgedClient implements ClientModInitializer {
 
         HandledScreens.register(ModScreenHandlers.GRINDSTONE_SCREEN_HANDLER, GrindstoneScreen::new);
 
-        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> 0xff000000, ModBlocks.BRINE_CAULDRON);
-        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> 0xff000000, ModBlocks.CLAY_SLURRY_CAULDRON);
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> 0xff057183, ModBlocks.BRINE_CAULDRON);
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> 0xff8b836e, ModBlocks.CLAY_SLURRY_CAULDRON);
     }
 }
