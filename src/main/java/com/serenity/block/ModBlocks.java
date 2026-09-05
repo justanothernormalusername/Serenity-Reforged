@@ -104,16 +104,17 @@ public class ModBlocks {
     public static final Block GRINDSTONE = registerBlock("grindstone",
             new GrindstoneBlock(AbstractBlock.Settings.create().nonOpaque()));
 
+
     public static final SerenityCauldronBlock BRINE_CAULDRON = Registry.register(
             Registries.BLOCK,
             Identifier.of(SerenityReforged.MOD_ID, "brine_cauldron"),
-            new SerenityCauldronBlock(AbstractBlock.Settings.create().strength(3f), SerenityReforged.MOD_ID + ":brine")
+            new SerenityCauldronBlock(AbstractBlock.Settings.create().requiresTool().strength(2f), SerenityReforged.MOD_ID + ":brine")
     );
 
     public static final SerenityCauldronBlock CLAY_SLURRY_CAULDRON = Registry.register(
             Registries.BLOCK,
             Identifier.of(SerenityReforged.MOD_ID, "clay_slurry_cauldron"),
-            new SerenityCauldronBlock(AbstractBlock.Settings.create().strength(3f), SerenityReforged.MOD_ID + ":clay_slurry")
+            new SerenityCauldronBlock(AbstractBlock.Settings.create().requiresTool().strength(2f), SerenityReforged.MOD_ID + ":clay_slurry")
     );
 
 
@@ -134,6 +135,5 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         SerenityReforged.LOGGER.info("Registering Mod Blocks for " + SerenityReforged.MOD_ID);
-
     }
 }

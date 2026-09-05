@@ -23,7 +23,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_MOONSTONE_BLOCK)
                 .add(ModBlocks.SUNSTONE_BLOCK)
                 .add(ModBlocks.POLISHED_SUNSTONE_BLOCK)
-                .add(ModBlocks.ALTAR_BLOCK);
+                .add(ModBlocks.ALTAR_BLOCK)
+                .add(ModBlocks.BRINE_CAULDRON)
+                .add(ModBlocks.CLAY_SLURRY_CAULDRON);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.GRANITE_GEM_ORE);

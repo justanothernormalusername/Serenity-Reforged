@@ -1,7 +1,7 @@
-// 1.21.1	2026-09-03T14:00:57.0319305	Serenity: Reforged/Tags for minecraft:block
+// 1.21.1	2026-09-04T19:35:57.9360281	Serenity: Reforged/Tags for minecraft:block
 3590968eba6e861db569bb3d03a3b53997bd20dc data\minecraft\tags\block\fence_gates.json
 af1e9dcb3ecb909bde41700ab3e478a302ea9b2e data\serenity\tags\block\needs_gem_tool.json
 016095e1ab978e85f1854c84e95b0aa4cdb98291 data\minecraft\tags\block\fences.json
-4d12b20e98742c7e089bd73b709063e8ac068e70 data\minecraft\tags\block\mineable\pickaxe.json
+23b18139a0d7e0890bb5fcbb4c62fe2f5b7416ed data\minecraft\tags\block\mineable\pickaxe.json
 00fa2255decf02abeb8549f9c960a1b839d1af9a data\minecraft\tags\block\needs_iron_tool.json
 434c392def387e198e7093312ea9fba69771f051 data\minecraft\tags\block\walls.json

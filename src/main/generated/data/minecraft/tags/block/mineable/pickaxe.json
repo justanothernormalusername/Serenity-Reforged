@@ -5,6 +5,8 @@
     "serenity:polished_moonstone_block",
     "serenity:sunstone_block",
     "serenity:polished_sunstone_block",
-    "serenity:altar_block"
+    "serenity:altar_block",
+    "serenity:brine_cauldron",
+    "serenity:clay_slurry_cauldron"
   ]
 }
