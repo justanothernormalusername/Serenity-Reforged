@@ -1,4 +1,4 @@
-// 1.21.1	2026-09-04T19:35:57.9315163	Serenity: Reforged/Block Loot Tables
+// 1.21.1	2026-09-13T22:47:54.5803779	Serenity: Reforged/Block Loot Tables
 d7b707e8d4ffb417ece81cc7494eb3be9821d865 data\serenity\loot_table\blocks\moonstone_door.json
 6518e0dce9bdcdbc4267ad2ca10745498e7f49c3 data\serenity\loot_table\blocks\polished_moonstone_block.json
 25f5eb3c85ea696756e2b2c13451cabb3f8dbf6b data\serenity\loot_table\blocks\moonstone_trapdoor.json
@@ -11,8 +11,8 @@ cd7451e8bd8b6e4bbfb85fea1c8ce3bb4b64480b data\serenity\loot_table\blocks\moonsto
 32cf1134da59f752b700171d90a379c7c070535e data\serenity\loot_table\blocks\swedish_meatball_block.json
 9ea2beae8047c2b7f505ad151179a03f86cb6798 data\serenity\loot_table\blocks\moonstone_fence_gate.json
 ed354cce4c9f372790a253295390df063e4b875e data\serenity\loot_table\blocks\moonstone_fence.json
-ef15b5053e1bf80a3a97b6f8f4fc68ce003e12c9 data\serenity\loot_table\blocks\moonstone_stairs.json
 d7fee7c0dc0cb6dcf1c348143b6e0278f582329d data\serenity\loot_table\blocks\moonstone_wall.json
+ef15b5053e1bf80a3a97b6f8f4fc68ce003e12c9 data\serenity\loot_table\blocks\moonstone_stairs.json
 ce8be5c363d86de66729e2e2312083a4e6969f40 data\serenity\loot_table\blocks\moonstone_pressure_plate.json
 548d115eeb79b74d3fbe03951bdc179110ed6f8a data\serenity\loot_table\blocks\brine_cauldron.json
 031d8585e0a8a78b2dba669621e6b2e4b91c0637 data\serenity\loot_table\blocks\polished_sunstone_block.json

@@ -6,7 +6,6 @@ import com.serenity.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.LeveledCauldronBlock;
 import net.minecraft.data.client.*;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
@@ -155,7 +154,6 @@ public class ModModelProvider extends FabricModelProvider {
         unregisteredItems.remove(ModItems.MOONSTONE_LEGGINGS);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.MOONSTONE_BOOTS);
         unregisteredItems.remove(ModItems.MOONSTONE_BOOTS);
-
 
         // Autogenerate rest as Models.GENERATED
         for (Item unregisteredItem : unregisteredItems) {

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "serenity:block/grindstone_particle" },
+    "facing=east":  { "model": "serenity:block/grindstone_particle" },
+    "facing=south": { "model": "serenity:block/grindstone_particle" },
+    "facing=west":  { "model": "serenity:block/grindstone_particle" }
+  }
+}
