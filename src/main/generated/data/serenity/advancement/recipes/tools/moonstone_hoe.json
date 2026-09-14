@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_smooth_stone": {
+    "has_polished_moonstone": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:smooth_stone"
+            "items": "serenity:polished_moonstone"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "serenity:altar_block"
+        "recipe": "serenity:moonstone_hoe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_smooth_stone"
+      "has_polished_moonstone"
     ]
   ],
   "rewards": {
     "recipes": [
-      "serenity:altar_block"
+      "serenity:moonstone_hoe"
     ]
   }
 }

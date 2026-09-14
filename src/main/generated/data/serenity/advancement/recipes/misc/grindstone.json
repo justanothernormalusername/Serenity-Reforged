@@ -1,11 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_smooth_stone": {
+    "has_grindstone": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:smooth_stone"
+            "items": "minecraft:grindstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_smooth_quartz": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:smooth_quartz"
           }
         ]
       },
@@ -13,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "serenity:altar_block"
+        "recipe": "serenity:grindstone"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_smooth_stone"
+      "has_smooth_quartz",
+      "has_grindstone"
     ]
   ],
   "rewards": {
     "recipes": [
-      "serenity:altar_block"
+      "serenity:grindstone"
     ]
   }
 }

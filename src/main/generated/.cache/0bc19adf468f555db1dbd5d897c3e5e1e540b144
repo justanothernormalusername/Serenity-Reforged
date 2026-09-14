@@ -1,9 +1,9 @@
-// 1.21.1	2026-09-13T22:47:54.5803779	Serenity: Reforged/Block Loot Tables
+// 1.21.1	2026-09-14T00:22:30.3801855	Serenity: Reforged/Block Loot Tables
 d7b707e8d4ffb417ece81cc7494eb3be9821d865 data\serenity\loot_table\blocks\moonstone_door.json
 6518e0dce9bdcdbc4267ad2ca10745498e7f49c3 data\serenity\loot_table\blocks\polished_moonstone_block.json
 25f5eb3c85ea696756e2b2c13451cabb3f8dbf6b data\serenity\loot_table\blocks\moonstone_trapdoor.json
-cdf6f5ecd39170595ee7a15d2352fd2e074229fc data\serenity\loot_table\blocks\granite_gem_ore.json
 cd7451e8bd8b6e4bbfb85fea1c8ce3bb4b64480b data\serenity\loot_table\blocks\moonstone_slab.json
+cdf6f5ecd39170595ee7a15d2352fd2e074229fc data\serenity\loot_table\blocks\granite_gem_ore.json
 278d216da458203c4dbfdb341c086d65eae87a88 data\serenity\loot_table\blocks\altar_block.json
 75b72d8a1b11496f7535a914377daa3ca805d4d1 data\serenity\loot_table\blocks\sunstone_block.json
 548d115eeb79b74d3fbe03951bdc179110ed6f8a data\serenity\loot_table\blocks\clay_slurry_cauldron.json

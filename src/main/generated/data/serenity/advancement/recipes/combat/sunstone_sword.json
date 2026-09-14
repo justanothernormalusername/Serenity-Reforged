@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_smooth_stone": {
+    "has_polished_sunstone": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:smooth_stone"
+            "items": "serenity:polished_sunstone"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "serenity:altar_block"
+        "recipe": "serenity:sunstone_sword"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_smooth_stone"
+      "has_polished_sunstone"
     ]
   ],
   "rewards": {
     "recipes": [
-      "serenity:altar_block"
+      "serenity:sunstone_sword"
     ]
   }
 }

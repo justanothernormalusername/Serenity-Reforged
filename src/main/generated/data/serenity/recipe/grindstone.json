@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:smooth_quartz"
+    },
+    "G": {
+      "item": "minecraft:grindstone"
+    },
+    "R": {
+      "item": "minecraft:red_concrete"
+    },
+    "S": {
+      "item": "minecraft:smooth_quartz_slab"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "#G#",
+    "#R#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "serenity:grindstone"
+  }
+}

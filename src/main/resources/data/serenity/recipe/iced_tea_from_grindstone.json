@@ -1,0 +1,10 @@
+{
+  "type": "serenity:grindstone",
+  "ingredient": {
+    "item": "minecraft:glow_berries"
+  },
+  "result": {
+    "count": 1,
+    "id": "serenity:iced_tea"
+  }
+}

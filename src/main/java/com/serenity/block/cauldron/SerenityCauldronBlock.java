@@ -1,14 +1,11 @@
 package com.serenity.block.cauldron;
 
 import com.mojang.serialization.MapCodec;
-import com.serenity.SerenityReforged;
 import net.minecraft.block.AbstractCauldronBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.cauldron.CauldronBehavior;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.ItemEntity;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.math.BlockPos;
@@ -65,13 +62,6 @@ public class SerenityCauldronBlock extends AbstractCauldronBlock {
         BlockState blockState = i == 0 ? Blocks.CAULDRON.getDefaultState() : state.with(LEVEL, i);
         world.setBlockState(pos, blockState);
         world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(blockState));
-    }
-
-    @Override
-    protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
-        if (!world.isClient && entity instanceof ItemEntity itemEntity && this.isEntityTouchingFluid(state, pos, entity)) {
-            SerenityReforged.LOGGER.info(itemEntity.getName().getString());
-        }
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.serenity.block.custom;
 
+import com.serenity.block.ModBlocks;
 import com.serenity.item.ModItems;
 import com.serenity.util.ModTags;
 import net.minecraft.block.Block;
@@ -14,7 +15,6 @@ import net.minecraft.item.Items;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.state.StateManager;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
@@ -47,8 +47,16 @@ public class AltarBlock extends Block {
             else if (itemEntity.getStack().getItem() == ModItems.SUNSTONE && !world.isDay()) {
                 itemEntity.setStack(new ItemStack(ModItems.MOONSTONE, itemEntity.getStack().getCount()));
             }
+            else if (itemEntity.getStack().getItem() == Items.GRANITE) {
+                itemEntity.setStack(new ItemStack(ModBlocks.GRANITE_GEM_ORE, itemEntity.getStack().getCount()));
+            }
             else if (isValidItem(itemEntity.getStack())) {
-                itemEntity.setStack(new ItemStack(Items.AMETHYST_SHARD, itemEntity.getStack().getCount()));
+                if (world.isDay()) {
+                    itemEntity.setStack(new ItemStack(ModItems.SUNSTONE, itemEntity.getStack().getCount()));
+                }
+                else if (!world.isDay()) {
+                    itemEntity.setStack(new ItemStack(ModItems.MOONSTONE, itemEntity.getStack().getCount()));
+                }
             }
         }
 

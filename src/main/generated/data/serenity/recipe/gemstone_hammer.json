@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:breeze_rod"
+    },
+    "R": {
+      "item": "minecraft:heavy_core"
+    },
+    "X": {
+      "item": "serenity:polished_sunstone"
+    },
+    "Y": {
+      "item": "serenity:polished_moonstone"
+    }
+  },
+  "pattern": [
+    "XRY",
+    "X#Y",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "serenity:gemstone_hammer"
+  }
+}

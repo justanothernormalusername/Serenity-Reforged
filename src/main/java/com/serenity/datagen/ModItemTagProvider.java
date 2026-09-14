@@ -18,8 +18,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup lookup) {
         getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
-                .add(Items.GOLD_INGOT)
-                .add(Items.IRON_INGOT)
+                .add(Items.AMETHYST_SHARD)
+                .add(Items.AMETHYST_CLUSTER)
                 .add(Items.DIAMOND);
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
@@ -27,7 +27,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.SUNSTONE_SWORD);
         getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .add(ModItems.MOONSTONE_PICKAXE)
-                .add(ModItems.SUNSTONE_PICKAXE);
+                .add(ModItems.SUNSTONE_PICKAXE)
+                .add(ModItems.GEMSTONE_HAMMER);
         getOrCreateTagBuilder(ItemTags.AXES)
                 .add(ModItems.MOONSTONE_AXE)
                 .add(ModItems.SUNSTONE_AXE);
