@@ -17,7 +17,7 @@ Then, add the dependency of the mod [FabricAPI 1.21.1](https://modrinth.com/mod/
 
 ### For Non-Modloaders:
 
-1. Download and run the [fabric installer](https://modrinth.com/mod/fabric-api), choose version 1.21.1
+1. Download and run the [fabric installer](https://fabricmc.net/use/installer/), choose version 1.21.1
 2. Press "Windows + R" or simply open "run" and type in the path `%appdata%\.minecraft`.
 3. Add a new folder called `mods`
 4. Within this folder, add the latest version of [FabricAPI 1.21.1](https://modrinth.com/mod/fabric-api/version/0.116.17+1.21.1) and the mod file from the GitHub.
