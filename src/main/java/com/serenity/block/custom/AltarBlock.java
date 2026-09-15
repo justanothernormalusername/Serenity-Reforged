@@ -34,6 +34,7 @@ public class AltarBlock extends Block {
         world.playSound(player, pos, SoundEvents.ITEM_GOAT_HORN_PLAY, SoundCategory.BLOCKS, 1.0F, 1.0F);
         if (!world.isClient) {
             world.setBlockState(pos, Blocks.GOLD_BLOCK.getDefaultState(), 3);
+            player.dropItem(new ItemStack(Items.RED_CARPET, 1), false);
         }
         return ActionResult.SUCCESS;
     }

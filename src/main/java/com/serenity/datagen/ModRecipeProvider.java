@@ -31,11 +31,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.SWEDISH_MEATBALLS, RecipeCategory.DECORATIONS, ModBlocks.SWEDISH_MEATBALL_BLOCK);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ALTAR_BLOCK)
-                .pattern("   ")
-                .pattern(" # ")
-                .pattern("###")
-                .input('#', Items.SMOOTH_STONE)
-                .criterion(hasItem(Items.SMOOTH_STONE), conditionsFromItem(Items.SMOOTH_STONE))
+                .pattern("X")
+                .pattern("#")
+                .input('X', Items.RED_CARPET)
+                .input('#', Items.GOLD_BLOCK)
+                .criterion(hasItem(Items.GOLD_BLOCK), conditionsFromItem(Items.GOLD_BLOCK))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SANDPAPER)

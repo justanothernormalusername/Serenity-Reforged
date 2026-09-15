@@ -20,13 +20,14 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ALTAR_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRANITE_GEM_ORE);
         BlockStateModelGenerator.BlockTexturePool moonstonePool = blockStateModelGenerator .registerCubeAllModelTexturePool(ModBlocks.MOONSTONE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.POLISHED_MOONSTONE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SUNSTONE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.POLISHED_SUNSTONE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SWEDISH_MEATBALL_BLOCK);
+
+        blockStateModelGenerator.registerSingleton(ModBlocks.ALTAR_BLOCK, TexturedModel.CUBE_BOTTOM_TOP);
 
         moonstonePool.stairs(ModBlocks.MOONSTONE_STAIRS);
         moonstonePool.slab(ModBlocks.MOONSTONE_SLAB);

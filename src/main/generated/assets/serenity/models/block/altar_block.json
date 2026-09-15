@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "all": "serenity:block/altar_block"
+    "bottom": "serenity:block/altar_block_bottom",
+    "side": "serenity:block/altar_block_side",
+    "top": "serenity:block/altar_block_top"
   }
 }
