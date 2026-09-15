@@ -27,17 +27,16 @@ Then, add the dependency of the mod [FabricAPI 1.21.1](https://modrinth.com/mod/
 
 **For Mac, .minecraft is at ~/Library/Application Support/minecraft**
 
-## AI DISCLOSURE:
-No AI code was used in the making of the project. Some AI usage with learning minecraft libraries and concepts. Also used Gemini search results from normal Google web search.
-
-## CREDITS
+## Credits
 [ProbablyADoor](https://github.com/ProbablyaDoor) for creating the Polished Moonstone Texture
 
-## OTHER INFO:
 This mod was inspired by my friend's mod [Cataclysm: Starscorched](https://github.com/ProbablyaDoor/Cataclysm-Starscorched), definitely go check it out!
 
-## UPCOMING FEATURES:
+## Upcoming Features:
 - Better grindstone crafting (using more items per craft)
 - Custom effects for the tools
 - New gems
 - More lapidary mechanics
+
+## AI DISCLOSURE
+No AI code was used in the making of the project. Some AI usage with learning minecraft libraries and concepts. Also used Gemini search results from normal Google web search.
